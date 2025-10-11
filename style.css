@@ -1,7 +1,107 @@
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-  }
+  /* Set line height to 1.5 times the font size
+        and use the OS’s UI font as the website font
+      */
+  font: 100%/1.5 system-ui;
+  max-width: 300ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+}
+:root{
+  --color-accent: oklch(0.7838 0.1085 133.94);
+  accent-color: var(--color-accent);
+}
+nav{
+  display: flex;
+}
+nav a{
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 1%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200);
+}
+
+.current{
+  border-bottom-width: 0.4em;
+  padding-bottom: calc(0.4em - 1px);
+  border-bottom-color: var(--color-accent);
+  font-weight: bold;
+}
+
+a:hover{
+  border-bottom-width: 0.4em;
+  padding-bottom: calc(0.4em - 1px);
+  border-bottom-color: var(--color-accent);
+  background-color: oklch(from var(--color-accent)0.9574 0.037 133.94);
+}
+form{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+label{
+  grid-template-columns: subgrid;
+}
+input, textarea{
+  font: inherit;
+}
+button{
+  font: inherit;
+  grid-column: 1 / -1;
+}
+.projects{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em; 
+}
+article{
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+h2{
+  margin: 0;
+}
+h1 {
+  font-size: 400%;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.page{
+  display: grid;
+  grid-template-columns: 27% 73%;
+  gap: 1em;
+}
+.leftPanel{
+  background-color: oklch(0.9044 0.0222 27);
+  align-items: center;
   
+}
+.rightPanel{
+  background-color: white;
+  align-items: center;
+}
+.contacts{
+  padding: 1em;
+}
+.contacts a{
+  text-decoration: none;
+  color: inherit;
+}
+.education{
+  padding: 1em;
+}
+.education a{
+  font-weight: 550;
+}
+.skills{
+  padding: 1em;
+}
+.experience{
+  margin-top: 2.5em;
+}
