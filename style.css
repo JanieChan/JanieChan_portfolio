@@ -24,19 +24,20 @@ nav a{
   border-bottom-style: solid;
   border-bottom-color: oklch(80% 3% 200);
 }
-
 .current{
   border-bottom-width: 0.4em;
   padding-bottom: calc(0.4em - 1px);
   border-bottom-color: var(--color-accent);
   font-weight: bold;
 }
-
-a:hover{
+nav a:hover{
   border-bottom-width: 0.4em;
   padding-bottom: calc(0.4em - 1px);
   border-bottom-color: var(--color-accent);
   background-color: oklch(from var(--color-accent)0.9574 0.037 133.94);
+}
+img{
+  max-width: 100%;
 }
 form{
   display: grid;
@@ -78,13 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1em;
 }
 .leftPanel{
-  background-color: oklch(0.9044 0.0222 27);
-  align-items: center;
-  
-}
-.rightPanel{
-  background-color: white;
-  align-items: center;
+  background-color: oklch(85.077% 0.06612 133.505);
 }
 .contacts{
   padding: 1em;
@@ -92,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 .contacts a{
   text-decoration: none;
   color: inherit;
+  overflow-wrap: break-word;
 }
 .education{
   padding: 1em;
