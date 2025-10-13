@@ -9,8 +9,11 @@ body {
 :root{
   --color-accent: oklch(0.7838 0.1085 133.94);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
+  border-bottom-color: var(--border-color);
 }
 nav{
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
 }
 nav a{
@@ -34,7 +37,7 @@ nav a:hover{
   border-bottom-width: 0.4em;
   padding-bottom: calc(0.4em - 1px);
   border-bottom-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent)0.9574 0.037 133.94);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 img{
   max-width: 100%;
