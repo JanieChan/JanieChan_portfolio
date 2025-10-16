@@ -3,6 +3,18 @@ console.log('IT’S ALIVE!');
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
+document.body.insertAdjacentHTML(
+  'afterbegin',
+    `
+    <label class="color-scheme">
+      Theme:
+      <select>
+        dark
+        light
+        Automatic
+      </select>
+    </label>`,
+  );
 
 // navLinks = $$("nav a");
 
