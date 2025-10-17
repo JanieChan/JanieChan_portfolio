@@ -7,10 +7,16 @@ body {
   max-width: 300ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
 }
+.color-scheme{
+  position: absolute;
+  font-family: inherit;
+  top: 1em;
+  right: 1em;
+  font-size: 70%;
+}
 :root{
   --color-accent: oklch(0.7838 0.1085 133.94);
   accent-color: var(--color-accent);
-  color-scheme: light dark;
   border-bottom-color: var(--border-color);
 }
 nav{

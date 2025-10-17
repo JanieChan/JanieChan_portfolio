@@ -3,19 +3,20 @@ console.log('IT’S ALIVE!');
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const autoLabel = prefersDark ? "Automatic (Dark)" : "Automatic (Light)";
 document.body.insertAdjacentHTML(
   'afterbegin',
-    `
-    <label class="color-scheme">
-      Theme:
-      <select>
-        dark
-        light
-        Automatic
-      </select>
-    </label>`,
-  );
-
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<option value="dark" >Dark</option>
+      <option value="light">Light</option>
+      <option value="light dark">${autoLabel}</option>
+		</select>
+	</label>`,
+);
 // navLinks = $$("nav a");
 
 // let currentLink = navLinks.find(
@@ -54,3 +55,40 @@ for (let p of pages) {
     a.target = "_blank";
   }
 }
+let select = document.querySelector('.color-scheme select');
+function setColorScheme(colorScheme) {
+  if (colorScheme === 'color-scheme') {
+    document.documentElement.style.removeProperty('color-scheme');
+  } else {
+    document.documentElement.style.setProperty('color-scheme', colorScheme);
+  }
+}
+if ("colorScheme" in localStorage) {
+  let saved = localStorage.colorScheme;
+  setColorScheme(saved);
+  select.value = saved;
+}
+select.addEventListener('input', function (event) {
+  let newScheme = event.target.value;
+  console.log('color scheme changed to', newScheme);
+  setColorScheme(newScheme);
+  localStorage.colorScheme = newScheme;
+});
+
+let form = document.querySelector('form');
+form?.addEventListener('submit', function (event) {
+  event.preventDefault();
+  let data = new FormData(form);
+  let url = form.action + '?';
+  let params = [];
+  for (let [name, value] of data) {
+    console.log(name, value);
+    if (name === 'Message') {
+      params.push(`body=${encodeURIComponent(value)}`);
+    } else {
+      params.push(`${name}=${encodeURIComponent(value)}`);
+    }
+  }
+  url += params.join('&');
+  location.href = url;
+});
