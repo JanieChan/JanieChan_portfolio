@@ -105,3 +105,26 @@ export async function fetchJSON(url) {
     console.error('Error fetching or parsing JSON data:', error);
   }
 }
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) return;
+  containerElement.innerHTML = '';
+
+  if (!projects || projects.length === 0) {
+      containerElement.innerHTML = '<p>No projects available.</p>';
+      return;
+  }
+
+  projects.forEach(project => {
+      const article = document.createElement('article');
+      article.innerHTML = `
+          <${headingLevel}>${project.title}</${headingLevel}>
+          <img src="${project.image}" alt="${project.title}">
+          <p>${project.description}</p>
+      `;
+      containerElement.appendChild(article);
+  });
+}
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
