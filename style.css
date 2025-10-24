@@ -111,3 +111,24 @@ h1, h2, h3, h4, h5, h6 {
 .experience{
   margin-top: 2.5em;
 }
+
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: auto auto;         /* two rows: top for dt, bottom for dd */
+  text-align: center;
+  gap: 0.5rem 1rem;                      /* optional spacing: row-gap and column-gap */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Place all <dt> elements in the first row */
+.github-stats dt {
+  grid-row: 1;
+  font-weight: bold;
+}
+
+/* Place all <dd> elements in the second row */
+.github-stats dd {
+  grid-row: 2;
+  margin: 0;   /* remove default margin for <dd> */
+}

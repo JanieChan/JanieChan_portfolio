@@ -1,18 +1,21 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore cupiditate vel, libero ducimus amet reprehenderit accusamus dolor asperiores eaque magni. Aperiam quisquam corrupti similique eaque a quaerat assumenda repudiandae neque?"
+        "title": "League of Legends Stats Analysis",
+        "year": "2025",
+        "image": "https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-47eb328eac5ddd63ebd096ded7d0d5ab",
+        "description": "Designed and conducted a hypothesis test on the collected data of the 2022 League of Legends World Championship event. Analyzed statistical patterns and trends to validate or refute the proposed hypothesis. Presented findings through a formatted report published on a website."
     },
     {
-        "title": "In sit officia fugit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Minus ducimus laboriosam, hic unde voluptatibus tenetur quibusdam laborum aliquam, quaerat quo quam rem dolores quasi neque eos a facilis aliquid, possimus amet quos incidunt? Earum placeat nesciunt repellendus explicabo?"
+        "title": "Big Data GUI",
+        "year": "2023",
+        "image": "https://go.tiffin.edu/wp-content/uploads/2022/05/mscj-crime-analysis-scaled.jpg",
+        "description": "Developed a GUI that sorts and displays the different crime reports by selected category. Utilized the police department incident report data spanning from January 2003 to May 2018."
     },
     {
-        "title": "Earum officiis tenetur atque!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Commodi minima dicta possimus doloribus adipisci odio dolore suscipit quos maiores repellendus debitis rerum cupiditate, sed delectus magnam nulla atque similique consectetur? Eos nisi nemo debitis rem quas delectus atque."
+        "title": "Text Excel",
+        "year": "2021", 
+        "image": "https://media.istockphoto.com/id/1388741354/vector/spreadsheet-editing-app-illustration-flat-design-editable-vector.jpg?s=612x612&w=0&k=20&c=RtghpoDO8azHQn4NF37E2df06fImIopI1SRVQzvy-5A=",
+        "description": "Developed a replica of the functionality and capabilities of a spreadsheet. Programmed core operations such as data input, editing, cell references, and formula calculations"
     },
     {
         "title": "Laudantium blanditiis odit suscipit?",
