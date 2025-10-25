@@ -111,24 +111,41 @@ h1, h2, h3, h4, h5, h6 {
 .experience{
   margin-top: 2.5em;
 }
-
+.home{
+  padding: 1em;
+  background-color: oklch(85.077% 0.06612 133.505);
+  border-top: 0.4em solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
+}
 .github-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  grid-template-rows: auto auto;         /* two rows: top for dt, bottom for dd */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;         
   text-align: center;
-  gap: 0.5rem 1rem;                      /* optional spacing: row-gap and column-gap */
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  gap: 0.5rem 1rem;                      
+  font-family:'Courier New', Courier, monospace;
+  font-size: 3ex;
 }
-
-/* Place all <dt> elements in the first row */
+.githubstatsbox{
+  padding: 1em;
+  background-color: oklch(85.077% 0.06612 133.505);
+  border-top: 0.4em solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
+}
 .github-stats dt {
   grid-row: 1;
   font-weight: bold;
 }
-
-/* Place all <dd> elements in the second row */
 .github-stats dd {
   grid-row: 2;
-  margin: 0;   /* remove default margin for <dd> */
+  margin: 0;
+}   
+.projectshome{
+  padding: 1em;
+  background-color: oklch(85.077% 0.06612 133.505);
+  border-top: 0.4em solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
 }
