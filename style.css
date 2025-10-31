@@ -156,6 +156,32 @@ h1, h2, h3, h4, h5, h6 {
 #projects-pie-plot {
   max-width: 20em;
   margin-block: 2em;
-
   overflow: visible;
+}
+.swatch{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+.legend{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 8px;
+  padding: 1em;
+  background-color: oklch(85.077% 0.06612 133.505);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+.legend-item{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.container{
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
