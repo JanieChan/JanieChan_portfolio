@@ -149,3 +149,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
 }
+.year{
+  font-family: Baskerville;
+  font-variant-numeric: oldstyle-nums
+}
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
