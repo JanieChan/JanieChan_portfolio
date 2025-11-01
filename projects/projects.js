@@ -79,7 +79,7 @@ function setQuery(query, selectedYear) {
         return matchesSearchQuery && matchesYear;
     });
 }
-searchInput.addEventListener('change', (event) => {
+searchInput.addEventListener('input', (event) => {
     currentSearchQuery = event.target.value.toLowerCase();
     let selectedYear = newData[selectedIndex]?.label;
     let filteredProjects = setQuery(currentSearchQuery, selectedYear);
