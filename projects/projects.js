@@ -9,6 +9,9 @@ projectsTitle.textContent = `${projects.length} Projects`;
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 let legendContainer = d3.select('.legend');
 let searchInput = document.querySelector('.searchBar');
+let currentSearchQuery = '';
+let newData = [];
+
 function renderPieChart(ProjectsGiven){
     let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
     let newRolledData = d3.rollups(
@@ -16,7 +19,7 @@ function renderPieChart(ProjectsGiven){
         (v) => v.length,
         (d) => d.year,
     );
-    let newData = newRolledData.map(([year, count]) => {
+    newData = newRolledData.map(([year, count]) => {
         return { value: count, label: year };
     });
     let newSliceGenerator = d3.pie().value((d) => d.value);
@@ -51,7 +54,7 @@ function renderPieChart(ProjectsGiven){
                 // TODO: filter projects and project them onto webpage
                 // Hint: `.label` might be useful
                 let selectedYear = newData[selectedIndex].label;
-                let filteredProjects = projects.filter(project => project.year === selectedYear);
+                let filteredProjects = setQuery(currentSearchQuery, selectedYear);
                 renderProjects(filteredProjects, projectsContainer, 'h2');
             }
         });
@@ -67,15 +70,19 @@ function renderPieChart(ProjectsGiven){
 }
 let selectedIndex = -1;
 renderPieChart(projects);
-function setQuery(query) {
+function setQuery(query, selectedYear) {
     query = query.toLowerCase();
     return projects.filter((project) => {
         let values = Object.values(project).join(' ').toLowerCase();
-        return values.includes(query);
+        let matchesSearchQuery = values.includes(query);
+        let matchesYear = selectedYear ? project.year === selectedYear : true;
+        return matchesSearchQuery && matchesYear;
     });
 }
 searchInput.addEventListener('change', (event) => {
-    let filteredProjects = setQuery(event.target.value);
+    currentSearchQuery = event.target.value.toLowerCase();
+    let selectedYear = newData[selectedIndex]?.label;
+    let filteredProjects = setQuery(currentSearchQuery, selectedYear);
     // re-render legends and pie chart when event triggers
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects);
