@@ -24,15 +24,39 @@ function renderPieChart(ProjectsGiven){
     let newArcs = newArcData.map((d) => arcGenerator(d));
     let colors = d3.scaleOrdinal(d3.schemeTableau10);
     let newSVG = d3.select('svg');
+    let legend = d3.select('.legend');
     newSVG.selectAll('path').remove();
 
     newArcs.forEach((arc, idx) => {
         newSVG.append('path')
         .attr('d', arc)
         .attr('fill', colors(idx)) // Fill in the attribute for fill color via indexing the colors variable
-    })
+        .on('click', () => {
+            selectedIndex = selectedIndex === idx ? -1 : idx;
+            newSVG
+                .selectAll('path')
+                .attr('class', (_, idx) => (
+                idx === selectedIndex ? 'selected' : ''
+                // TODO: filter idx to find correct pie slice and apply CSS from above
+            ));
+            legend
+                .selectAll('li')
+                .attr('class', (_, idx) => (
+                idx === selectedIndex ? 'selected' : ''
+                // TODO: filter idx to find correct legend and apply CSS from above
+            ));
+            if (selectedIndex === -1) {
+                renderProjects(projects, projectsContainer, 'h2');
+            } else {
+                // TODO: filter projects and project them onto webpage
+                // Hint: `.label` might be useful
+                let selectedYear = newData[selectedIndex].label;
+                let filteredProjects = projects.filter(project => project.year === selectedYear);
+                renderProjects(filteredProjects, projectsContainer, 'h2');
+            }
+        });
+    });
     legendContainer.selectAll('li').remove();
-    let legend = d3.select('.legend');
     newData.forEach((d, idx) => {
     legend
         .append('li')
@@ -41,6 +65,7 @@ function renderPieChart(ProjectsGiven){
         .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
     });
 }
+let selectedIndex = -1;
 renderPieChart(projects);
 function setQuery(query) {
     query = query.toLowerCase();
