@@ -11,9 +11,11 @@
 <body>
     <h1>Meta</h1>
     <p>This page includes stats about the code of this website</p><br>
-    <h2>Summary</h2>
-    <div id="stats"></div><br>
-    <h2>Commits by time of day</h2><br>
+    <div class="summary">
+        <h2>Summary</h2>
+        <div id="stats"></div>
+    </div>
+    <br><h2>Commits by time of day</h2><br>
     <div id="chart"></div>
     <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
@@ -34,8 +36,10 @@
         <dt>Lines Edited</dt>
         <dd id="commit-lines-edited"></dd>
     </dl>
-    <p id="selection-count">No commits selected</p>
+    <div class="language">
+        <p id="selection-count" class="stats">No commits selected</p>
     <dl id="language-breakdown" class="stats">
+    </div>
     </dl>
 </body>
 </html>

@@ -186,7 +186,7 @@ function renderTooltipContent(commit) {
     const date = document.getElementById('commit-date');
     const time = document.getElementById('commit-time');
     const author = document.getElementById('commit-author');
-    const linesEdited = document.getElementById('commit-lines-edited');
+    const lines = document.getElementById('commit-lines-edited');
 
     if (Object.keys(commit).length === 0) return;
 
@@ -200,6 +200,7 @@ function renderTooltipContent(commit) {
     });
 
     author.textContent = commit.author;
+    lines.textContent = commit.totalLines;
 }
 
 function updateTooltipVisibility(isVisible) {

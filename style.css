@@ -214,17 +214,21 @@ path {
   cursor: pointer;
 }
 
+.summary{
+  background-color: oklch(85.077% 0.06612 133.505);
+  border-top: 0.4em solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 0.4em solid var(--color-accent);  
+  padding: 10px;
+}
+
 .stats {
   display: grid;
   grid-template-columns: auto;  
   gap: 1rem 3rem; 
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
-  padding: 10px;
-  background-color: oklch(85.077% 0.06612 133.505);
-  border-top: 0.4em solid var(--color-accent);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-bottom: 0.4em solid var(--color-accent);  
+
 }
 
 .stats dt,
@@ -310,4 +314,12 @@ circle.selected {
   stroke-opacity: 0.7;
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
+}
+
+.language{
+  background-color: oklch(85.077% 0.06612 133.505);
+  border-top: 0.4em solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 0.4em solid var(--color-accent);
+  padding: 10px;  
 }
