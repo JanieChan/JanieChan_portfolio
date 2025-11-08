@@ -31,6 +31,7 @@ let pages = [
   { url: 'https://github.com/JanieChan', title: 'Github'},
   { url: 'contact/', title: 'Contact' },
   { url: 'resume/', title: 'Resume' },
+  { url: 'meta/', title: 'Meta' },
 ];
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
