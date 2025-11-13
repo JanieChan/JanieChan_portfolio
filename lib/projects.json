@@ -12,16 +12,16 @@
         "description": "Developed a GUI that sorts and displays the different crime reports by selected category. Utilized the police department incident report data spanning from January 2003 to May 2018."
     },
     {
+        "title": "Bikewatching Geospatial Visualization",
+        "year": "2025",
+        "image": "/images/bikewatching_screenshot.png",
+        "description": "A geospatial visualization showing bike datas located in Boston and Cambridge. The green lines are the bike lanes, circles are the Blue Bike stations and the colors represent the traffic at the destinations. There's also a filter for the traffic at specific time of the day."
+    },
+    {
         "title": "Text Excel",
         "year": "2021", 
         "image": "https://media.istockphoto.com/id/1388741354/vector/spreadsheet-editing-app-illustration-flat-design-editable-vector.jpg?s=612x612&w=0&k=20&c=RtghpoDO8azHQn4NF37E2df06fImIopI1SRVQzvy-5A=",
         "description": "Developed a replica of the functionality and capabilities of a spreadsheet. Programmed core operations such as data input, editing, cell references, and formula calculations"
-    },
-    {
-        "title": "Laudantium blanditiis odit suscipit?",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Enim distinctio excepturi voluptatibus, consequatur perferendis quod cumque numquam cupiditate deserunt blanditiis sunt perspiciatis temporibus, ipsam, suscipit voluptatum hic doloribus exercitationem. Cupiditate esse quibusdam consequuntur architecto animi tenetur ex a!"
     },
     {
         "title": "Laborum voluptates sapiente temporibus!",
