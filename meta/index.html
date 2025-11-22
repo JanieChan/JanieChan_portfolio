@@ -11,12 +11,29 @@
 <body>
     <h1>Meta</h1>
     <p>This page includes stats about the code of this website</p><br>
+    <div>
+        <label>
+            Show commits until:
+            <input type=range id="commit-progress" min = 0 max = 100>
+            <time id="commit-time"></time>
+        </label>
+    </div>
     <div class="summary">
         <h2>Summary</h2>
         <div id="stats"></div>
+    </div><br>
+    <!-- <div class="language">
+        <p id="selection-count" class="stats">No commits selected</p>
+    <dl id="language-breakdown" class="stats">
+    </div><br>
+    </dl> -->
+    <div id="scrolly-1">
+        <div class = ".step" id="scatter-story"></div>
+        <div id="scatter-plot">
+            <h2>Commits by time of day</h2><br>
+            <div id="chart"></div>
+        </div>
     </div>
-    <br><h2>Commits by time of day</h2><br>
-    <div id="chart"></div>
     <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
         <dd>
@@ -36,10 +53,21 @@
         <dt>Lines Edited</dt>
         <dd id="commit-lines-edited"></dd>
     </dl>
-    <div class="language">
-        <p id="selection-count" class="stats">No commits selected</p>
-    <dl id="language-breakdown" class="stats">
-    </div>
-    </dl>
 </body>
+<div>
+    <div class = "step" id="scatter-story2"></div>
+    <dl id="files">
+        <!-- we want the following structure for each file:
+        <div>
+            <dt>
+                <code>{file.name}</code>
+                <small>{file.lines.length} lines</small>
+            </dt>
+            <dd>
+                <div class="line"></div>
+            </dd>
+        </div>
+        -->
+    </dl>
+</div>
 </html>
