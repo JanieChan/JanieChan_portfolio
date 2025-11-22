@@ -349,11 +349,15 @@ time{
 #files {
   display: grid;
   grid-template-columns: 1fr 4fr;
-
+  height: fit-content;
+  position: sticky;
+  top: 0;
+  
   > div {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: subgrid;
+    
   }
 
   dt {
@@ -399,7 +403,19 @@ dd {
     flex: 1;
   }
 }
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
 #scatter-story {
+  position: relative;
+}
+#scatter-story2 {
   position: relative;
 }
 #scatter-plot {
@@ -412,4 +428,9 @@ dd {
 
 .step{
   padding-bottom: 10px;
+}
+
+.footer{
+  height: 100px;
+  margin: 100px;
 }

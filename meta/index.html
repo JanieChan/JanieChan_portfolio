@@ -33,8 +33,7 @@
             <h2>Commits by time of day</h2><br>
             <div id="chart"></div>
         </div>
-    </div>
-    <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
         <dd>
             <a href="" id="commit-link" target="_blank"></a>
@@ -53,21 +52,23 @@
         <dt>Lines Edited</dt>
         <dd id="commit-lines-edited"></dd>
     </dl>
+    </div>
+    <h2>Codebase evolution</h2>
+    <div id="scrolly-2">
+        <dl id="files">
+            <!-- we want the following structure for each file:
+            <div>
+                <dt>
+                    <code>{file.name}</code>
+                    <small>{file.lines.length} lines</small>
+                </dt>
+                <dd>
+                    <div class="line"></div>
+                </dd>
+            </div>
+            -->
+        </dl>
+        <div class = ".step" id="scatter-story2"></div>
+    </div>
 </body>
-<div>
-    <div class = "step" id="scatter-story2"></div>
-    <dl id="files">
-        <!-- we want the following structure for each file:
-        <div>
-            <dt>
-                <code>{file.name}</code>
-                <small>{file.lines.length} lines</small>
-            </dt>
-            <dd>
-                <div class="line"></div>
-            </dd>
-        </div>
-        -->
-    </dl>
-</div>
 </html>
