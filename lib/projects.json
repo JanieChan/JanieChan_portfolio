@@ -14,7 +14,7 @@
     {
         "title": "Bikewatching Geospatial Visualization",
         "year": "2025",
-        "image": "../images/bikewatching_screenshot.png",
+        "image": "https://raw.githubusercontent.com/JanieChan/JanieChan_portfolio/refs/heads/main/images/bikewatching_screenshot.png",
         "description": "A geospatial visualization showing bike datas located in Boston and Cambridge. The green lines are the bike lanes, circles are the Blue Bike stations and the colors represent the traffic at the destinations. There's also a filter for the traffic at specific time of the day."
     },
     {
