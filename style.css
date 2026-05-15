@@ -116,12 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   background-color: oklch(85.077% 0.06612 133.505);
   border-top: 0.4em solid var(--color-accent);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
+  /* background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14)); */
 }
 .github-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto;         
+  grid-template-rows: auto auto;        
   text-align: center;
   gap: 0.5rem 1rem;                      
   font-family:'Courier New', Courier, monospace;
@@ -132,22 +132,23 @@ h1, h2, h3, h4, h5, h6 {
   background-color: oklch(85.077% 0.06612 133.505);
   border-top: 0.4em solid var(--color-accent);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
+  /* background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14)); */
 }
 .github-stats dt {
   grid-row: 1;
   font-weight: bold;
 }
 .github-stats dd {
+  grid-column: span 1;  
   grid-row: 2;
-  margin: 0;
+  justify-self: center;
 }   
 .projectshome{
   padding: 1em;
   background-color: oklch(85.077% 0.06612 133.505);
   border-top: 0.4em solid var(--color-accent);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14));
+  /* background: linear-gradient(to bottom, oklch(85.077% 0.06612 133.505), oklch(89.339% 0.02686 133.14)); */
 }
 .year{
   font-family: Baskerville;
